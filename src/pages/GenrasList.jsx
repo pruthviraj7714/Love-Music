@@ -34,7 +34,7 @@ const GenrasList = ({ token }) => {
 
   if (loading) {
     return (
-      <div className="grid grid-cols-6 gap-4 p-4 mt-16">
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-4 p-4 mt-16">
         {[...Array(24)].map((_, index) => (
           <GenraCardSkeleton key={index} />
         ))}
@@ -45,7 +45,7 @@ const GenrasList = ({ token }) => {
   return (
     <div>
       <Header />
-      <div className="grid grid-cols-6 gap-4 p-4 mt-16">
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-4 p-4 mt-16">
         {genras.map((genra, index) => (
           <Link
             to={`../genra/${genra}`}
