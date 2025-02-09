@@ -19,6 +19,8 @@ const TopHits = ({ token }) => {
             },
           }
         );
+        console.log(playlistResponse);
+
         setPlayLists(playlistResponse.data.playlists.items);
       } catch (error) {
         console.log("Error fetching data:", error.message);
@@ -42,15 +44,17 @@ const TopHits = ({ token }) => {
         </p>
         <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-5 gap-8 mb-2">
           {playLists && playLists.length > 0
-            ? playLists.map((playlist) => (
-                <PlayListCard
-                  key={playlist.id}
-                  img={playlist.images[0].url}
-                  title={playlist.name}
-                  count={playlist.tracks.total}
-                  id={playlist.id}
-                />
-              ))
+            ? playLists
+                .filter(Boolean)
+                .map((playlist) => (
+                  <PlayListCard
+                    key={playlist?.id}
+                    img={playlist?.images[0]?.url}
+                    title={playlist?.name}
+                    count={playlist?.tracks.total}
+                    id={playlist?.id}
+                  />
+                ))
             : "Loading"}
         </div>
       </div>

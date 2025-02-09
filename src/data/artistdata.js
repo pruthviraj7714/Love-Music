@@ -27,7 +27,7 @@
     {
         name:"Atif Aslam",
         id : "2oSONSC9zQ4UonDKnLqksx",
-        img: "https://yt3.googleusercontent.com/8k6FBAZ2E8NnM5KtXgZXcNnIQUJS1AL8BmHpnikeCRgxrj6YXrFtQi02IjFpj_cdzAYgFjTbyQ=s900-c-k-c0x00ffffff-no-rj"
+        img: "https://img.indiaforums.com/person/640x480/0/2164-atif-aslam.jpg?c=7vP7E1"
     },
     {
         name: "Justin Bieber",
